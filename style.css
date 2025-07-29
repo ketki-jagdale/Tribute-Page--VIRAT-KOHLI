@@ -1,0 +1,510 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+body{
+    background-color: #dcd9d9b4;
+    color: #212121;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Header */
+nav{
+    height: 3rem;
+    width: 100%;
+    background-color: rgb(67, 163, 180);
+    position: fixed;
+    z-index: 100;
+}
+nav ul {
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+nav ul li a{
+    /* color: #ff6f00; */
+    color: #0636e1;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+nav ul li a:hover{
+    text-decoration:  underline solid rgba(247, 0, 0, 0.473);
+}
+
+
+
+/* Hero-Section */
+#hero-section{
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    animation: slideRight 0.5s ease-in-out;
+    background-color: #fff;
+}
+@keyframes slideRight{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+.hero-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+#tribute-text{
+    font-size: 2rem;
+}
+#animated-text{
+    font-size: 3rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+#animated-text::before{
+    content: "The King";
+    display: inline-block;
+    overflow: hidden;
+    border-right: 4px solid red;
+    animation: typing 3s steps(30, end) infinite, blink 0.6s infinite, words 12s infinite;
+}
+@keyframes typing{
+    0% ,10% {width: 0;}
+    20%, 80% {width: 100%;}
+}
+@keyframes blink {
+    50% {border-color: transparent;}
+}
+@keyframes words {
+  0% , 25% {content: "The King";}
+  26% , 50% {content: "The Run Machine";}
+  51% , 75% {content: "The Chase Master";}
+  76% , 100% {content: "The Legend";}
+}
+#hero-name{
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.hero-left, .hero-right{
+    width: 42%;
+}
+.hero-right img{
+    border-radius: 1rem;
+    box-shadow: -7px -7px 7px black;
+}
+.hero-right img:hover{
+    transform: scale(1.1);
+}
+
+  
+
+/* About-Section */
+#about-section{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-items: center;
+    margin-bottom: 4rem;
+    padding: 0 5rem 0 5rem;
+    background-color: rgba(0, 0, 0, 0.742);
+    color: white;
+}
+#about-section h2{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+#about-section p{
+    text-align: justify;
+    margin-bottom: 2.5rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+
+
+/* achievement-section */
+#achievement-section{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem
+    ;
+    border-bottom: 2px solid black;
+    background-color: #155fcfd3;
+}
+#achievement-section h2{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    padding-top: 2rem;    
+}
+.achievement-card-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 3rem;
+    margin-top: 1.5rem;
+}
+.achievement-card{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 1px 1px 2px white;
+}
+.award-title{
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 2rem;
+    pointer-events: none;
+}
+.award-year{
+    font-weight: 700;
+    pointer-events: none;
+}
+
+.achievement-card-container :hover{
+    transform: scale(1.2 , 1.1);
+    transition: 0.3s;
+    background-color: rgba(0, 0, 255, 0.247);
+    color: white;
+    border-color: orange;
+}
+
+
+
+/* Highlight-section */
+#highlight-section{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+#highlight-section h2{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+}
+.highlight-card-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 3rem;
+    margin-top: 1.5rem;
+}
+.card{
+    background-color: black;
+    border-radius: 7%;
+    overflow: hidden;
+}
+.card-img-top{
+    border-radius: 7% 7% 0 0;
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+.card a{
+    text-decoration: none;
+    color: #fff;
+}
+.card-body{
+    pointer-events: none;
+}
+.card-text{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.highlight-card :hover{
+    transform: scale(1.07 , 1.07);
+    transition: 0.3s;
+    box-shadow: 3px -3px 7px black;
+}
+
+
+
+/* Gallery */
+#gallery-section{
+    background-color: #8e8989;
+}
+#gallery-section h2{
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    text-align: center;
+}
+.gallery-container{
+    columns: 18rem;
+}
+.gallery-container img{
+    width: 100%;
+    margin-bottom: 1rem;
+    border: 1px solid black;
+}
+
+
+
+/* Footer */
+.footer-container{
+    height: 30vh;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}    
+.footer-icons a{
+    text-decoration: none;
+    font-size: 2.5rem;
+    margin-right: 3rem;
+}
+#icon1{
+    color:#d02a5f
+}
+#icon2{
+    color: #0b66ff;
+}
+#icon3{
+    color: #fff;
+}
+.footer-para{
+    color: #fff;
+    font-size: 2rem;
+    background-color: rgba(255, 255, 0, 0.139);
+}
+
+
+
+/* Media Queries */
+/* Mobile Devices */
+@media(max-width: 768px){
+    nav{
+        display: none;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    #tribute-text {
+        font-size: 1.5rem;
+        text-align: center;
+    }  
+
+    .animated-text {
+        font-size: 3rem;
+    }
+
+    #hero-text {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .hero-right img {
+        min-height: 5rem;
+        min-width: 25rem; 
+        margin-top: 2rem;
+        transition: none;
+    }
+    
+    .hero-right img:hover {
+        transform: none; 
+    }
+
+    .about-section h3{
+        margin-top: 3rem;
+        font-size: 1.8rem ;
+    }
+
+    .highlights h3{
+        font-size: 1.8rem;
+    }
+
+    .highlights-card-container{
+        grid-template-columns: repeat(1, 1fr);
+        place-self: center;
+    }
+
+    .card:hover{
+        transform: none;
+    }
+
+    .achievements h1{
+        font-size: 1.5rem;
+    }
+
+    .achievements-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-para{
+        display : none;
+    }
+
+    .footer-links{
+        display: block;
+    }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px){
+    nav{
+        position: sticky;
+        top: 0;
+    }
+
+    nav ul li{
+        font-size: 1.1rem;
+    }
+
+    #hero-section {
+        gap: 1.5rem;
+    }
+
+    #tribute-text {
+        font-size: 2rem;
+    }  
+
+    .animated-text {
+        font-size: 3rem;
+    }
+
+    #hero-text {
+        font-size: 2rem;
+    }
+
+    .hero-right img {
+        height: auto;
+        margin-top: 2rem;
+        transition: none;
+    }
+    
+    .hero-right img:hover {
+        transform: none; 
+    }
+
+    .about-section h3{
+        margin-top: 3rem;
+    }
+
+    #highlight-section h3{
+        font-size: 1.8rem;
+    }
+
+    .highlight-card-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card:hover{
+        transform: none;
+    }
+
+    #achievement-section h2{
+        font-size: 2rem;
+    }
+
+    .achievement-card-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-para{
+        display : block;
+    }
+}
+
+
+/* Mobile Devices */
+@media(max-width: 768px){
+    nav{
+        display: none;
+    }
+
+    #hero-section {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    #tribute-text {
+        font-size: 1.5rem;
+        text-align: center;
+    }  
+
+    #animated-text {
+        font-size: 3rem;
+    }
+
+    #hero-text {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .hero-right{
+        min-height: 5rem;
+        min-width: 25rem; 
+        margin-top: 2rem;
+        transition: none;
+    }
+    
+    .hero-right:hover {
+        transform: none; 
+    }
+
+    #about-section h3{
+        margin-top: 3rem;
+        font-size: 1.8rem ;
+    }
+
+    #highlight-section h3{
+        font-size: 1.8rem;
+    }
+
+    .highlight-card-container{
+        grid-template-columns: repeat(1, 1fr);
+        place-self: center;
+    }
+
+    .card:hover{
+        transform: none;
+    }
+
+    #achievements-section h1{
+        font-size: 1.5rem;
+    }
+
+    .achievement-card-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-para{
+        display : none;
+    }
+}
