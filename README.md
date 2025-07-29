@@ -1,5 +1,4 @@
 # Tribute-Page--VIRAT-KOHLI
-# 🎖 Virat Kohli Tribute Page
 
 A simple and responsive tribute website dedicated to **Virat Kohli**, built using **HTML and CSS**.
 
@@ -22,9 +21,9 @@ This is a beginner-friendly front-end project created as part of my web developm
 - Embedding multimedia content  
 - Organizing sections and content meaningfully
 
-## 🚀 Live Preview
+## 🚀Preview
 
-You can view the live project here: https://www.linkedin.com/posts/ketkijagdale7508_tribute-page-virat-kohli-description-activity-7355598339389743105-mhEj?utm_source=share&utm_medium=member_desktop&rcm=ACoAAES5vpsBbH7r207Rj09DymuQ_nryKnfT_VE
+You can view the project here: https://www.linkedin.com/posts/ketkijagdale7508_tribute-page-virat-kohli-description-activity-7355598339389743105-mhEj?utm_source=share&utm_medium=member_desktop&rcm=ACoAAES5vpsBbH7r207Rj09DymuQ_nryKnfT_VE
 
 ## 📁 How to Use
 
