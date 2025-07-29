@@ -31,7 +31,7 @@ You can view the live project here: https://www.linkedin.com/posts/ketkijagdale7
 To view this project locally:
 
 1. Clone the repository:
-   git clone  https://github.com/ketki-jagdale/Tribute-Page--VIRAT-KOHLI 
+   [git clone  https://github.com/ketki-jagdale/Tribute-Page--VIRAT-KOHLI ](https://github.com/ketki-jagdale/Tribute-Page--VIRAT-KOHLI.git)
 
 2. Open the `index.html` file in your browser.
    
